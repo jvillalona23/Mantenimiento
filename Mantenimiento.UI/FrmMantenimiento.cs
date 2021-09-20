@@ -52,6 +52,11 @@ namespace Mantenimiento.UI
         {
             btnAgregar.Text = "Agregar";
             empId = 0;
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            txtEdad.Text = "";
+            txtTelefono.Text = "";
+            txtNombre.Focus();
         }
 
         private void dgvConsulta_DoubleClick(object sender, EventArgs e)
@@ -72,7 +77,7 @@ namespace Mantenimiento.UI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro que desea eliminar este registro?", "Eliminar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro que desea eliminar este registro?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 db.Eliminar(empleado);
                 //clear()
@@ -80,5 +85,6 @@ namespace Mantenimiento.UI
                 MessageBox.Show("Registro eliminado correctamente");
             }
         }
+
     }
 }

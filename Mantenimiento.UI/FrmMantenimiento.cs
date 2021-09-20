@@ -1,12 +1,6 @@
 ﻿using Mantenimiento.Data;
+using Mantenimiento.Data.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mantenimiento.UI
@@ -20,7 +14,7 @@ namespace Mantenimiento.UI
 
         Crud db = new Crud();
         int empId = 0;
-        Empleado empleado = new Empleado();
+        Empleados empleado = new Empleados();
 
         private void Mantenimiento_Load(object sender, EventArgs e)
         {

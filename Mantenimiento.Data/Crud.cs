@@ -1,44 +1,38 @@
-﻿using System;
+﻿using Mantenimiento.Data.Data;
+using Mantenimiento.Data.Models;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mantenimiento.Data
 {
     public class Crud
     {
         AppDbContext _DbContext = new AppDbContext();
-        Empleado Empleadosdb;
-        public Crud()
-        {
-            Empleadosdb = new Empleado();
-        }
 
-        public List<Empleado> ListadoEmpleados()
+        public List<Empleados> ListadoEmpleados()
         {
             return _DbContext.Empleados.ToList();
         }
 
-        public void Agregar(Empleado empleados)
+        public void Agregar(Empleados empleados)
         {
             _DbContext.Empleados.Add(empleados);
             _DbContext.SaveChanges();
         }
 
-        public Empleado EmpleadoPorId(int id)
+        public Empleados EmpleadoPorId(int id)
         {
             return _DbContext.Empleados.Where(a => a.Id == id).FirstOrDefault();
         }
 
-        public void Editar(Empleado empleados)
+        public void Editar(Empleados empleados)
         {
             _DbContext.Entry(empleados).State = EntityState.Modified;
             _DbContext.SaveChanges();
         }
 
-        public void Eliminar(Empleado empleado)
+        public void Eliminar(Empleados empleado)
         {
             _DbContext.Empleados.Remove(empleado);
             _DbContext.SaveChanges();

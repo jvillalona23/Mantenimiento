@@ -87,9 +87,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mantenimiento.Data\Mantenimiento.Data.csproj">
-      <Project>{2833ed0a-825b-4a1d-bbf6-a878dc6b9fc0}</Project>
-      <Name>Mantenimiento.Data</Name>
+    <ProjectReference Include="..\Mantenimiento.BusinessLogic\Mantenimiento.BusinessLogic.csproj">
+      <Project>{24a52770-2b1c-47f0-82df-b9fe68b0413d}</Project>
+      <Name>Mantenimiento.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mantenimiento.Common\Mantenimiento.Common.csproj">
+      <Project>{16debd8c-a720-49a6-a0a6-56236f102bc6}</Project>
+      <Name>Mantenimiento.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

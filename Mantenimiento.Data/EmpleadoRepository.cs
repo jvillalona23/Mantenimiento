@@ -1,12 +1,13 @@
-﻿using Mantenimiento.Data.Data;
-using Mantenimiento.Data.Models;
+﻿using Mantenimiento.Common;
+using Mantenimiento.Common.Models;
+using Mantenimiento.Data.Data;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
 namespace Mantenimiento.Data
 {
-    public class Crud
+    public class EmpleadoRepository : IRepository
     {
         AppDbContext _DbContext = new AppDbContext();
 

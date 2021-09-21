@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mantenimiento.UI\Mantenimiento.UI.csproj">
-      <Project>{01c58305-be0c-40a4-9dce-4d9b1a791052}</Project>
-      <Name>Mantenimiento.UI</Name>
+    <ProjectReference Include="..\Mantenimiento.Common\Mantenimiento.Common.csproj">
+      <Project>{16debd8c-a720-49a6-a0a6-56236f102bc6}</Project>
+      <Name>Mantenimiento.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mantenimiento.Data\Mantenimiento.Data.csproj">
+      <Project>{2833ed0a-825b-4a1d-bbf6-a878dc6b9fc0}</Project>
+      <Name>Mantenimiento.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

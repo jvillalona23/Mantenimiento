@@ -1,4 +1,4 @@
-﻿using Mantenimiento.Data.Models;
+﻿using Mantenimiento.Common.Models;
 using System.Data.Entity;
 
 namespace Mantenimiento.Data.Data
